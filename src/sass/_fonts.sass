@@ -1,0 +1,48 @@
+//===== Font-face:
++font-face('ff-poppins', Poppins-Regular)
++font-face('ff-poppins', Poppins-Bold, 700)
++font-face('icomoon', icomoon, normal, normal, block)
+
+
+//===== icomoon:
+[class^="icon-"],
+[class*=" icon-"]
+  // use !important to prevent issues with browser extensions that change fonts:
+  font-family: 'icomoon' !important
+  speak: never
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  // Better Font Rendering:
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.icon
+  &-facebook:before
+    content: "\e900"
+  &-facebook-simple:before
+    content: "\e901"
+  &-google:before
+    content: "\e902"
+  &-instagram:before
+    content: "\e903"
+  &-twitter:before
+    content: "\e904"
+  &-youtube:before
+    content: "\e905"
+
+
+//===== Font weight name mappings:
+
+// 100 - Thin, Hairline
+// 200 - Extra Light, Ultra Light
+// 300 - Light
+// 400 - Normal, Regular
+// 500 - Medium
+// 600 - Semi Bold, Demi Bold
+// 700 - Bold
+// 800 - Extra Bold, Ultra Bold
+// 900 - Black, Heavy
