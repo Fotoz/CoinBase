@@ -1,10 +1,46 @@
 <header class="header">
   <div class="header__wrapper">
-    <div class="container">
+    <div class="header__container container">
       <div class="header__inner">
 
-        <!-- hamburger -->
-        <button class="hamburger hamburger--emphatic" type="button">
+        <!-- .header__logo -->
+        <div class="header__logo">
+          <picture>
+            <source srcset="img/header/header__logo--mobile.svg" type="image/jpeg" media="(max-width: 575px)">
+            <source srcset="img/header/header__logo.svg" type="image/jpeg" media="(min-width: 576px)">
+            <img src="img/header/header__logo.svg" alt="CoinBase Logo">
+          </picture>
+        </div>
+
+        <!-- .header__menu -->
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
+            <li class="header__item"><a href="about.html" class="header__link">About Us</a></li>
+            <li class="header__item"><a href="blog.html" class="header__link">Blog</a></li>
+            <li class="header__item"><a href="contact.html" class="header__link">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- .header__sell -->
+        <div class="header__sell">
+          <div class="header__sell-link">
+            <a href="#">Sell Bitcoin / Giftcard</a>
+          </div>
+
+          <div class="header__sell-drop-down-links">
+            <a href="#">Sell Bitcoin</a>
+            <a href="#">Sell Giftcard</a>
+          </div>
+        </div>
+
+        <!-- .header__login -->
+        <div class="header__login" data-da=".header__list, 991, 4">
+          <button class="header__button button" type="button">login</button>
+        </div>
+
+        <!-- .hamburger -->
+        <button class="hamburger hamburger--spin-r" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>

@@ -1,0 +1,185 @@
+.footer
+  +responsive-value(padding-top, 7.5, 3)
+  padding-bottom: 1rem
+
+  background-color: #151515
+
+  // .footer__container
+  &__container
+    +media-min($breakpoint-xxl)
+      max-width: $container-footer + px
+
+  // .footer__inner
+  &__inner
+    display: grid
+    grid-template-columns: fit-content(380px)
+
+    margin-bottom: 4rem
+
+    +media-max($breakpoint-lg)
+      gap: 5rem 3rem
+    +media-max($breakpoint-md)
+      row-gap: 4rem
+    +media-max($breakpoint-sm)
+      margin-bottom: 2.5rem
+
+    +media-min($breakpoint-md)
+      justify-content: space-between
+      grid-template-columns: fit-content(280px) 310px
+    +media-min($breakpoint-lg)
+      grid-template-columns: fit-content(240px) auto 310px
+    +media-min($breakpoint-xl)
+      grid-template-columns: fit-content(280px) auto 310px
+    +media-min($breakpoint-xxl)
+      grid-template-columns: fit-content(340px) auto 310px
+
+  // .footer__col
+  &__col
+    > *:last-child
+      margin-bottom: 0
+
+    &:nth-child(2)
+      +media-max($breakpoint-lg)
+        justify-content: center
+      +media-max($breakpoint-md)
+        justify-content: space-between
+
+      +media-min($breakpoint-xsm)
+        display: flex
+
+      @media (min-width: 768px) and (max-width: 991px)
+        grid-column: 1 / 3
+
+      > *
+        +media-min($breakpoint-xl)
+          margin:
+            right: 2.5rem
+            left: 2.5rem
+        +media-min($breakpoint-xxl)
+          margin:
+            right: 4rem
+            left: 4rem
+
+    &:nth-child(3)
+      @media (min-width: 768px) and (max-width: 991px)
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+
+  // .footer__logo
+  &__logo
+    margin-bottom: 3rem
+
+    +media-max($breakpoint-md)
+      margin-bottom: 2rem
+
+  // .footer__text
+  &__text
+    margin-bottom: 3rem
+
+    font-size: 1.4rem
+    color: #a2a2a2
+
+  // .footer__social
+  &__social
+
+  // .footer__social-link
+  &__social-link
+    font-size: 1.4rem
+    line-height: 1.4
+    color: rgba($white, .7)
+    +trs(color)
+
+    &:not(:last-child)
+      margin-right: 1.7rem
+
+    +media-hover
+      color: $white
+
+    +media-max($breakpoint-lg)
+      font-size: 2.5rem
+
+  // .footer__menu
+  &__menu
+    +media-max($breakpoint-lg)
+      margin-right: 8rem
+    +media-max($breakpoint-md)
+      margin-right: 4rem
+    +media-max($breakpoint-xsm)
+      margin-bottom: 3rem
+
+    +media-min($breakpoint-lg)
+      margin:
+        right: 1rem
+        left: 2rem
+
+  // .footer__title
+  &__title
+    margin-bottom: 3rem
+
+    font-size: 1.8rem
+    color: $white
+
+    +media-max($breakpoint-lg)
+      margin-bottom: 2rem
+
+  // .footer__list
+  &__list
+
+  // .footer__item
+  &__item
+    line-height: 2
+
+  // .footer__link
+  &__link
+    font-size: 1.2rem
+    color: #a2a2a2
+    +trs(color)
+
+    +media-hover
+      color: $white
+
+    +media-max($breakpoint-lg)
+      font-size: 1.4rem
+
+  // .footer__contacts
+  &__contacts
+    display: flex
+    flex-direction: column
+
+    +media-min($breakpoint-lg)
+      margin:
+        right: 2rem
+        left: 1rem
+
+  // .footer__address
+  &__address
+
+  // .footer__download-app
+  &__download-app
+    margin-top: auto
+
+  // .footer__instagram
+  &__instagram
+    display: grid
+    gap: 1rem
+    grid-template-columns: repeat(4, fit-content(70px))
+
+    margin-top: 3.6rem
+
+    +media-max($breakpoint-lg)
+      margin-top: 2.6rem
+
+    img
+      filter: grayscale(1)
+      +trs(filter, .2s, linear)
+
+      +media-hover
+        filter: grayscale(0)
+
+  // .footer__copyrights
+  &__copyrights
+    font-size: 1.2rem
+    color: #4a4a4a
+
+    @media (min-width: 768px) and (max-width: 991px)
+      text-align: center
