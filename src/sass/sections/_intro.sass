@@ -1,0 +1,123 @@
+.intro
+  position: relative
+  +responsive-value(padding-top, 14, 4)
+  +responsive-value(padding-bottom, 32, 20, $canvas-width)
+
+  +bgi('intro/intro__overlay.svg')
+
+  +media-min($breakpoint-xxs)
+    margin-top: 6rem
+  +media-min($breakpoint-lg)
+    margin-top: 9.4rem
+  +media-min($breakpoint-xl)
+    margin-top: 13.4rem
+
+  // .intro__inner
+  &__inner
+    position: relative
+    z-index: 5
+    max-width: 53rem
+
+    > *:last-child
+      margin-bottom: 0
+
+    &::after
+      +media-min($breakpoint-lg)
+        content: ''
+        position: absolute
+        z-index: -1
+
+    // .intro__inner--home-illustration
+    &--home-illustration
+      &::after
+        +media-min($breakpoint-lg)
+          top: -8.5rem
+          right: -55rem
+
+          +box(628px, 519px)
+          +bgi('pages/home/intro__illustration.png', contain)
+          +bgi_webp(pages/home/intro__illustration)
+
+        +media-min($breakpoint-xl)
+          right: -71rem
+
+    // .intro__inner--about-illustration
+    &--about-illustration
+      &::after
+        +media-min($breakpoint-lg)
+          top: -7rem
+          right: -52rem
+
+          +box(549px, 405px)
+          +bgi('pages/about/intro__illustration.png', contain)
+          +bgi_webp(pages/about/intro__illustration)
+
+        +media-min($breakpoint-xl)
+          top: -5.5rem
+          right: -63rem
+
+    // .intro__inner--blog-illustration
+    &--blog-illustration
+      &::after
+        +media-min($breakpoint-lg)
+          top: -9rem
+          right: -40rem
+
+          +box(447px, 455px)
+          +bgi('pages/blog/intro__illustration.png', contain)
+          +bgi_webp(pages/blog/intro__illustration)
+
+        +media-min($breakpoint-xl)
+          top: -12rem
+          right: -61rem
+          +box(497px, 505px)
+
+    // .intro__inner--contact-illustration
+    &--contact-illustration
+      &::after
+        +media-min($breakpoint-lg)
+          top: -11rem
+          right: -45rem
+
+          +box(509px, 501px)
+          +bgi('pages/contact/intro__illustration.png', contain)
+          +bgi_webp(pages/contact/intro__illustration)
+
+        +media-min($breakpoint-xl)
+          right: -67rem
+          +box(539px, 531px)
+
+  // .intro__page-name
+  &__page-name
+    display: block
+    margin-bottom: 1.5rem
+
+    font-size: 1.2rem
+    text-transform: uppercase
+    color: $white
+
+  // .intro__title
+  &__title
+    margin-bottom: calc(3.5 / 4 * 1em)
+
+    +responsive-value(font-size, 4, 2.6)
+    font-weight: 700
+    line-height: 1.4
+    color: $white
+
+    span
+      font-weight: 400
+
+    +media-min($breakpoint-xsm)
+      white-space: pre-line
+
+  // .intro__text
+  &__text
+    margin-bottom: calc(3 / 1.8 * 1em)
+
+    +responsive-value(font-size, 1.8, 1.5)
+    line-height: 1.5
+    color: $white
+
+    +media-min($breakpoint-xsm)
+      white-space: pre-line
