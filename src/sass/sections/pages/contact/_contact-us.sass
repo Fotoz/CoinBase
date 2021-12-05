@@ -1,0 +1,93 @@
+.contact-us
+  +responsive-value(padding-bottom, 9, 4.5)
+
+  // .contact-us__inner
+  &__inner
+    margin:
+      right: auto
+      left: auto
+    max-width: 732px
+
+    > *:last-child
+      margin-bottom: 0
+
+  // .contact-us__title
+  &__title
+    +responsive-value(margin-bottom, 4.7, 2.7)
+
+    font-size: 1.7rem
+    line-height: 1.6
+    text-align: center
+
+  // .contact-us__publish-form
+  &__publish-form
+    +responsive-value(margin-bottom, 9, 4)
+
+  // .contact-us__map
+  &__map
+    position: relative
+
+    +media-max($breakpoint-sm)
+      margin:
+        right: -1.5rem
+        left: -1.5rem
+      padding-top: 4rem
+
+  // .contact-us__address
+  &__address
+    position: absolute
+    top: 17%
+    left: 50%
+
+    transform: translateX(-50%)
+
+    max-width: 330px
+    margin-bottom: 0
+    padding: 5rem 4.3rem
+
+    border-radius: 1.5rem
+    background-color: $white
+    box-shadow: 4px 13px 65px rgba(154, 154, 154, 0.5)
+
+    +media-max($breakpoint-lg)
+      top: 20%
+      padding: 4rem 3.3rem
+    +media-max($breakpoint-md)
+      top: 13%
+      padding: 2.3rem
+    +media-max($breakpoint-sm)
+      top: -4%
+      padding: 1.5rem 2rem
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: -1rem
+      left: 50%
+
+      transform: translateX(-50%)
+
+      border:
+        style: solid
+        width: 1rem 1rem 0 1rem
+        color: $white transparent transparent transparent
+
+  // .contact-us__address-item
+  &__address-item
+    &:not(:last-child)
+      +responsive-value(margin-bottom, 1.7, 1)
+
+    line-height: 1.6
+
+  // .contact-us__address-icon
+  &__address-icon
+    margin-right: .7rem
+    +box(32px, 31px)
+
+  // .contact-us__address-link
+  &__address-link
+    display: flex
+    align-items: center
+
+    font-size: 1.2rem
+    color: #2f2f2f
