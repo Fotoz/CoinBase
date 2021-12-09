@@ -89,7 +89,7 @@
 
   // .title--big
   &--big
-    font-size: 3.2rem
+    +responsive-value(font-size, 3.2, 2)
 
   // .title--small
   &--small
@@ -102,3 +102,25 @@
     background: initial
     -webkit-text-fill-color: initial
     -webkit-background-clip: initial
+
+
+// .blog-date
+.blog-date
+  font-size: 1rem
+  text-transform: uppercase
+  color: $black
+
+  span
+    padding:
+      right: 1rem
+      left: 1rem
+
+    &:first-child
+      border-right: .1rem solid $black
+
+  // .blog-date--white
+  &--white
+    color: $white
+
+    span:first-child
+      border-color: $white

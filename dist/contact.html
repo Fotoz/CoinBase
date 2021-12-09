@@ -41,7 +41,7 @@
               <ul class="header__list">
                 <li class="header__item"><a href="index.html" class="header__link">Home</a></li>
                 <li class="header__item"><a href="about.html" class="header__link">About Us</a></li>
-                <li class="header__item"><a href="blog.html" class="header__link">Blog</a></li>
+                <li class="header__item header__item--blog"><a href="blog.html" class="header__link">Blog</a></li>
                 <li class="header__item"><a href="contact.html" class="header__link">Contact Us</a></li>
               </ul>
             </nav>
@@ -92,27 +92,24 @@
       </section>
 
       <!-- Contact Us -->
-      <section class="contact-us">
+      <div class="contact-us">
         <div class="container">
           <div class="contact-us__inner">
 
-            <!-- .contact__title -->
-            <h6 class="contact-us__title">Please note that all message will be replied within the next 12hours</h6>
+            <!-- .contact-us__form -->
+            <div class="contact-us__form">
+              <p class="contact-us__form-warn">Please note that all message will be replied within the next 12hours</p>
 
-            <!-- .contact-us__publish-form -->
-            <div class="contact-us__publish-form">
-
-              <!-- .publish-form -->
+              <!-- Publish Form -->
               <form class="publish-form" action="#" method="post" name="publish-form">
                 <input class="publish-form__input publish-form__item" type="text" name="name" placeholder="Name *" autocomplete="off" required>
                 <input class="publish-form__input publish-form__item" type="email" name="email" placeholder="Email *" autocomplete="off" required>
                 <textarea class="publish-form__textarea publish-form__item" name="your comment" placeholder="Your Comment"></textarea>
                 <button class="button" type="submit">publish</button>
               </form>
-
             </div>
 
-            <!-- .contact__map -->
+            <!-- .contact-us__map -->
             <div class="contact-us__map">
               <picture><source srcset="img/pages/contact/contact-us__map.webp" type="image/webp"><img class="img-fluid" src="img/pages/contact/contact-us__map.jpg" alt="Contact Us Map"></picture>
 
@@ -133,7 +130,7 @@
 
           </div> <!-- /.__inner -->
         </div> <!-- /.cotainer -->
-      </section>
+      </div>
 
     </main>
 

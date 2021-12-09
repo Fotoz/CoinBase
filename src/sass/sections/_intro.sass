@@ -1,9 +1,10 @@
 .intro
   position: relative
-  +responsive-value(padding-top, 14, 4)
-  +responsive-value(padding-bottom, 33, 12, $canvas-width)
 
-  +bgi('intro/intro__overlay.svg')
+  +responsive-value(padding-top, 14, 5)
+  +responsive-value(padding-bottom, 33, 11, 2000)
+
+  +bgi('intro/intro-bg.svg')
 
   +media-min($breakpoint-xxs)
     margin-top: 6rem
@@ -11,6 +12,14 @@
     margin-top: 9.4rem
   +media-min($breakpoint-xl)
     margin-top: 13.4rem
+
+  &--home
+    +responsive-value(padding-top, 14, 4)
+    +responsive-value(padding-bottom, 33, 12, 2000)
+
+  &--blog-content
+    +bgi('pages/blog-content/intro-bg.jpg')
+    +bgi_webp('pages/blog-content/intro-bg')
 
   // .intro__inner
   &__inner
@@ -87,6 +96,25 @@
           right: -67rem
           +box(539px, 531px)
 
+    // .intro__inner--blog-content
+    &--blog-content
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+      max-width: 80rem
+      +responsive-value(min-height, 23.7, 0)
+
+      margin:
+        right: auto
+        left: auto
+
+      text-align: center
+
+      &::after
+        display: none
+
   // .intro__page-name
   &__page-name
     display: block
@@ -110,6 +138,17 @@
 
     +media-min($breakpoint-xsm)
       white-space: pre-line
+
+    // .intro__title--blog-content
+    &--blog-content
+      margin-bottom: calc(1.7 / 3.2 * 1em)
+
+      +responsive-value(font-size, 3.2, 2.6)
+      text-transform: uppercase
+
+      span
+        font-weight: 700
+        text-transform: none
 
   // .intro__text
   &__text

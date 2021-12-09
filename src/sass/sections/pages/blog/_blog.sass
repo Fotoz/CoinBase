@@ -1,0 +1,143 @@
+.blog-cards
+  +responsive-value(padding-top, 7, 1.5)
+  +responsive-value(padding-bottom, 14.5, 4.5)
+
+  // .blog-cards__item
+  &__item
+    +responsive-value(margin-bottom, 6, 3)
+
+    &:nth-last-child(2)
+      +responsive-value(margin-bottom, 11.5, 4.5)
+
+  // .blog-cards__pagination
+  &__pagination
+
+// .blog-card
+.blog-card
+  overflow: hidden
+  border-top-left-radius: 3rem
+  border-top-right-radius: 3rem
+
+  +media-max(1600)
+    max-width: 900px
+    margin:
+      right: auto
+      left: auto
+  +media-max($breakpoint-md)
+    border-top-left-radius: 1.5rem
+    border-top-right-radius: 1.5rem
+
+  // .blog-card__poster
+  &__poster
+    position: relative
+    padding-top: 44.52%
+
+  // .blog-card__image
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+
+    object-position: center 30%
+
+  // .blog-card__body-wrapper
+  &__body-wrapper
+    border-right: .1rem solid $accent
+    border-bottom: .1rem solid $accent
+    border-left: .1rem solid $accent
+
+    border-bottom-right-radius: 3rem
+    border-bottom-left-radius: 3rem
+
+    +media-max($breakpoint-md)
+      border-bottom-right-radius: 1.5rem
+      border-bottom-left-radius: 1.5rem
+
+  // .blog-card__body
+  &__body
+    > *:last-child
+      margin-bottom: 0
+
+    max-width: 850px
+    margin:
+      right: auto
+      left: auto
+    padding:
+        right: 2rem
+        left: 2rem
+    +responsive-value(padding-top, 6, 2)
+    +responsive-value(padding-bottom, 4, 2.5)
+
+    text-align: center
+
+    +media-max($breakpoint-sm)
+      padding:
+        right: 1rem
+        left: 1rem
+
+  // .blog-card__title
+  &__title
+    margin-bottom: .8rem
+    text-transform: uppercase
+
+    &::after
+      display: none
+
+    +media-max($breakpoint-lg)
+      max-width: 400px
+      margin:
+        right: auto
+        left: auto
+
+  // .blog-card__blog-date
+  &__blog-date
+    +responsive-value(margin-bottom, 2.7, 1.5)
+
+  // .blog-card__text
+  &__text
+    +responsive-value(margin-bottom, 3.7, 2)
+    +media-max($breakpoint-sm)
+      font-size: 1.4rem
+
+
+// .pagination
+.pagination
+  text-align: center
+
+  // .pagination__link
+  &__link
+    display: inline-flex
+    justify-content: center
+    align-items: center
+
+    +box(6rem)
+
+    &:not(:last-child)
+      margin-right: .7rem
+
+    border-radius: 50%
+    border: .1rem solid #e0e0e0
+    +trs(all, .2s)
+
+    +media-hover
+      color: $accent
+      border-color: $accent
+
+    +media-max($breakpoint-md)
+      +box(4rem)
+
+      &:not(:last-child)
+        margin-right: .5rem
+
+    // .pagination__link--is-active
+    &--is-active
+      color: $white
+      background: $gradient
+
+    // .pagination__link--next
+    &--next
+      +box(10rem, 6rem)
+      border-radius: 10rem
+
+      +media-max($breakpoint-md)
+        +box(7rem, 4rem)

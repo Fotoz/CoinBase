@@ -33,9 +33,13 @@ $(window).on('resize', function () {
 });
 
 // Highlight the current page:
-$('.header__link').each(function() {
+$('.header__link').each(function () {
   if ( window.location.href == (this.href) ) {
     $(this).closest('li').addClass('current');
     $(this).closest('li').parent().parent().addClass('current');
   }
 });
+
+if ( window.location.pathname == ('/blog-content.html') ) {
+  $('.header__item--blog').addClass('current');
+}

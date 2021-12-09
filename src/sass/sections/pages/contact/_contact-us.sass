@@ -11,17 +11,17 @@
     > *:last-child
       margin-bottom: 0
 
-  // .contact-us__title
-  &__title
+  // .contact-us__form
+  &__form
+    +responsive-value(margin-bottom, 9, 4)
+
+  // .contact-us__form-warn
+  &__form-warn
     +responsive-value(margin-bottom, 4.7, 2.7)
 
     font-size: 1.7rem
     line-height: 1.6
     text-align: center
-
-  // .contact-us__publish-form
-  &__publish-form
-    +responsive-value(margin-bottom, 9, 4)
 
   // .contact-us__map
   &__map
@@ -79,11 +79,6 @@
 
     line-height: 1.6
 
-  // .contact-us__address-icon
-  &__address-icon
-    margin-right: .7rem
-    +box(32px, 31px)
-
   // .contact-us__address-link
   &__address-link
     display: flex
@@ -91,3 +86,11 @@
 
     font-size: 1.2rem
     color: #2f2f2f
+
+    +media-hover
+      text-decoration: underline
+
+  // .contact-us__address-icon
+  &__address-icon
+    margin-right: .7rem
+    +box(32px, 31px)

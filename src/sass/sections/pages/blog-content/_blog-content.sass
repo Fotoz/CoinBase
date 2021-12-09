@@ -1,0 +1,203 @@
+.blog-article
+  +responsive-value(padding-top, 4.5, .5)
+  +responsive-value(padding-bottom, 11.5, 4.5)
+
+  // .blog-article__inner
+  &__inner
+    > *:last-child
+      margin-bottom: 0
+
+    max-width: 750px
+    margin:
+      right: auto
+      left: auto
+
+  // .blog-article__content
+  &__content
+    +responsive-value(padding-bottom, 11.5, 3.5)
+
+  // .blog-article__content-item
+  &__content-item
+    &:not(:last-child)
+      +responsive-value(margin-bottom, 6, 3)
+
+    +media-min($breakpoint-md)
+      &::after
+        content: ''
+        display: table
+        height: auto
+        clear: both
+
+    p
+      +responsive-value(margin-bottom, 2.8, 1.4)
+
+      &:last-child
+        margin-bottom: 0
+
+  // .blog-article__image
+  &__image
+    max-width: 352px
+
+    border-radius: 1.5rem
+    overflow: hidden
+
+    +media-max($breakpoint-md)
+      margin: 0 auto 1.4rem
+
+    +media-min($breakpoint-md)
+      float: right
+      margin:
+        top: 1.5rem
+        left: 6rem
+
+  // .blog-article__info
+  &__info
+    +responsive-value(padding-bottom, 11.5, 3.5)
+
+  // .blog-article__info-item
+  &__info-item
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &:first-child
+      +responsive-value(margin-bottom, 6, 2.5)
+
+      +media-max($breakpoint-sm)
+        display: block
+        text-align: center
+
+    &:nth-child(2)
+      margin-bottom: 1.5rem
+
+      > *
+        display: block
+
+        font-size: 1.8rem
+        font-weight: 700
+        line-height: 1.38
+        +trs(border-bottom, .2s)
+
+        +media-max(430)
+          font-size: 1.3rem
+
+        +media-min($breakpoint-sm)
+          max-width: 215px
+          padding-bottom: .4rem
+
+          border-bottom: .1rem solid transparent
+
+      +media-max($breakpoint-sm)
+        display: block
+
+    &:last-child
+      margin-bottom: 0
+
+  // .blog-article__tags
+  &__tags
+    font-weight: 700
+    font-style: italic
+
+    +media-max($breakpoint-sm)
+      &:not(:last-child)
+        margin-bottom: 1rem
+
+  // .blog-article__social
+  &__social
+    display: flex
+    justify-content: center
+    column-gap: 2rem
+
+  // .blog-article__social-link
+  &__social-link
+    display: inline-flex
+    justify-content: center
+    align-items: center
+
+    +box(3.7rem)
+
+    font-size: 1.7rem
+    color: $white
+    border-radius: 50%
+    overflow: hidden
+    +trs(background-color)
+
+    // .blog-article__social-link--facebook
+    &--facebook
+      background-color: #272eae
+
+      +media-hover
+        background-color: darken(#272eae, 10)
+
+    // .blog-article__social-link--twitter
+    &--twitter
+      background-color: #1590d8
+
+      +media-hover
+        background-color: darken(#1590d8, 10)
+
+    // .blog-article__social-link--youtube
+    &--youtube
+      background-color: #d0021b
+
+      i
+        margin-left: .1rem
+
+      +media-hover
+        background-color: darken(#d0021b, 10)
+
+  // .blog-article__sell
+  &__sell
+    color: #2f2f2f
+
+    +media-hover
+      border-bottom: .1rem solid #2f2f2f
+
+    +media-max($breakpoint-sm)
+      &:not(:last-child)
+        margin-bottom: 1rem
+
+  // .blog-article__exchange
+  &__exchange
+    background: $gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+    +media-min($breakpoint-sm)
+      text-align: right
+
+    +media-hover
+      border-bottom: .1rem solid $secondary
+
+  // .blog-article__prev,
+  // .blog-article__next
+  &__prev,
+  &__next
+    font-size: 1.2rem
+    color: #989898
+    +trs(color)
+
+    +media-hover
+      color: $black
+
+    +media-max($breakpoint-sm)
+      font-size: 1.6rem
+
+  // .blog-article__form
+  &__form
+
+  // .blog-article__form-title
+  &__form-title
+    &:not(:last-child)
+      +responsive-value(margin-bottom, 2, 1)
+
+    font-size: 2.4rem
+    font-weight: 700
+
+  // .blog-article__form-warn
+  &__form-warn
+    &:not(:last-child)
+      +responsive-value(margin-bottom, 5, 2)
+
+    +media-max($breakpoint-md)
+      font-size: 1.46rem

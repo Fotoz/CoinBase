@@ -133,14 +133,14 @@
         background-color: $primary
         +trs(transform)
 
+      &.current
+        &::after
+          transform: scale(1)
+
     +media-min($breakpoint-xl)
       margin:
         right: 3.4rem
         left: 3.4rem
-
-    &.current
-      &::after
-        transform: scale(1)
 
   // .header__link
   &__link
