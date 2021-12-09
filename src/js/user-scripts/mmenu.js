@@ -40,6 +40,6 @@ $('.header__link').each(function () {
   }
 });
 
-if ( window.location.pathname == ('/blog-content.html') ) {
+if ( window.location.pathname == ('/CoinBase/dist/blog-content.html') ) {
   $('.header__item--blog').addClass('current');
 }
