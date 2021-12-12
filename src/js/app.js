@@ -6,4 +6,5 @@ $(function () {
 @@include('user-scripts/dynamic-adapt.js')
 @@include('user-scripts/mmenu.js')
 @@include('user-scripts/header__sell.js')
+@@include('user-scripts/toTop-button.js')
 });
