@@ -53,8 +53,8 @@
               </div>
 
               <div class="header__sell-drop-down-links">
-                <a href="#">Sell Bitcoin</a>
-                <a href="#">Sell Giftcard</a>
+                <a href="#" class="header__sell-bitcoin">Sell Bitcoin</a>
+                <a href="#" class="header__sell-giftcard">Sell Giftcard</a>
               </div>
             </div>
 
@@ -64,7 +64,7 @@
             </div>
 
             <!-- .hamburger -->
-            <button class="hamburger hamburger--spin-r" type="button">
+            <button class="header__hamburger hamburger hamburger--spin-r" type="button">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
@@ -285,6 +285,303 @@
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8 7l4-4m0 0l4 4m-4-4v18" />
       </svg>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal modal--sign-up">
+      <div class="modal__body modal__body--sign-up">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <h3 class="modal__title">Sign up</h3>
+        <p class="modal__subtitle">There’s no charge upon registration</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Sign up">
+          <input class="modal__input" type="text" name="Full Name" placeholder="Full Name" autocomplete="off" required>
+          <input class="modal__input" type="email" name="Email" placeholder="Email" autocomplete="off" required>
+          <input class="modal__input" type="password" name="Password" placeholder="Password" autocomplete="off" required>
+          <input class="modal__input modal__input--sign-up" type="password" name="Confirm Password" placeholder="Confirm Password" autocomplete="off" required>
+          <button class="modal__button button" type="button">sign up</button>
+        </form>
+
+        <div class="modal__question">Already a member? <a href="#" class="modal__question-link modal__login-link">Login</a></div>
+
+      </div>
+    </div>
+    <div class="modal modal--login">
+      <div class="modal__body modal__body--login">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <h3 class="modal__title">Welcome back!</h3>
+        <p class="modal__subtitle">Kindly fill in your login details to proceed</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Login">
+          <input class="modal__input" type="email" name="Email" placeholder="Email" autocomplete="off" required>
+          <input class="modal__input modal__input--login" type="password" name="Password" placeholder="Password" autocomplete="off" required>
+          <div class="modal__forgot">
+            <a href="#" class="modal__forgot-link">i forgot my password?</a>
+          </div>
+          <button class="modal__button button" type="button">login</button>
+        </form>
+
+        <div class="modal__question">Don’t have an account yet? <a href="#" class="modal__question-link modal__sign-up-link">Sign Up</a></div>
+
+      </div>
+    </div>
+    <div class="modal modal--gift-cards">
+      <div class="modal__body modal__body--gift-cards">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <h3 class="modal__title">Got Gift Cards For Sale?</h3>
+        <p class="modal__subtitle">Choose your preferred card type to continue the exchange process</p>
+
+        <div class="modal__items">
+          <a href="#" class="modal__item modal__item--amazon">
+            <img class="img-fluid" src="img/modals/amazon.svg" alt="Amazon">
+          </a>
+          <a href="#" class="modal__item modal__item--itunes">
+            <img class="img-fluid" src="img/modals/itunes.svg" alt="iTunes">
+          </a>
+          <a href="#" class="modal__item modal__item--steam">
+            <img class="img-fluid" src="img/modals/steam.svg" alt="Steam">
+          </a>
+          <a href="#" class="modal__item modal__item--google-play">
+            <img class="img-fluid" src="img/modals/google-play.svg" alt="Google Play">
+          </a>
+          <a href="#" class="modal__item modal__item--others">
+            <img class="img-fluid" src="img/modals/others.svg" alt="Others">
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="modal modal--crypto">
+      <div class="modal__body modal__body--crypto">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <h3 class="modal__title">Sell bitcoin</h3>
+        <p class="modal__subtitle">Choose your preffered product to continue</p>
+
+        <div class="modal__items modal__items--crypto">
+          <a href="#" class="modal__item modal__item--bitcoin">
+            <img class="img-fluid" src="img/modals/bitcoin.svg" alt="Bitcoin">
+          </a>
+          <a href="#" class="modal__item modal__item--ethereum">
+            <img class="img-fluid" src="img/modals/ethereum.svg" alt="Ethereum">
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="modal modal--bitcoin">
+      <div class="modal__body">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="modal__logo modal__logo--bitcoin">
+          <img class="img-fluid" src="img/modals/bitcoin.svg" alt="Bitcoin">
+        </div>
+        <p class="modal__rate"><span>N360.00</span> is our conversion rate for 0.1 BTC on this platform.</p>
+        <p class="modal__text">The total value you derived here will be the amount you’ll be receiving during the total transaction process</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Bitcoin Value">
+          <input class="modal__input" type="text" name="Bitcoin Value" placeholder="Bitcoin Value" autocomplete="off" required>
+          <input class="modal__input modal__input--sum" type="text" name="Total Sum" placeholder="#0.00" disabled>
+          <button class="modal__button button" type="button">proceed</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="modal modal--ethereum">
+      <div class="modal__body">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="modal__logo modal__logo--ethereum">
+          <img class="img-fluid" src="img/modals/ethereum.svg" alt="Ethereum">
+        </div>
+        <p class="modal__rate"><span>N360.00</span> is our conversion rate for 0.1 ETH on this platform.</p>
+        <p class="modal__text">The total value you derived here will be the amount you’ll be receiving during the total transaction process</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Ethereum Value">
+          <input class="modal__input" type="text" name="Ethereum Value" placeholder="Ethereum Value" autocomplete="off" required>
+          <input class="modal__input modal__input--sum" type="text" name="Total Sum" placeholder="#0.00" disabled>
+          <button class="modal__button button" type="button">proceed</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="modal modal--amazon">
+      <div class="modal__body">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="modal__logo modal__logo--amazon">
+          <img class="img-fluid" src="img/modals/amazon.svg" alt="Amazon">
+        </div>
+        <p class="modal__rate"><span>N360.00</span> is our conversion rate for every Amazon card on this platform.</p>
+        <p class="modal__text">The total value you derived here will be the amount you’ll be receiving during the total transaction process</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Amazon Value">
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Type" placeholder="Card Type" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Currency" placeholder="Card Currency" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Amount" placeholder="Amount" autocomplete="off" required>
+          <input class="modal__input modal__input--sum" type="text" name="Total Sum" placeholder="#0.00" disabled>
+          <button class="modal__button button" type="button">proceed</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="modal modal--itunes">
+      <div class="modal__body">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="modal__logo modal__logo--itunes">
+          <img class="img-fluid" src="img/modals/itunes.svg" alt="iTunes">
+        </div>
+        <p class="modal__rate"><span>N360.00</span> is our conversion rate for every App Store iTunes card on this platform.</p>
+        <p class="modal__text">The total value you derived here will be the amount you’ll be receiving during the total transaction process</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Amazon Value">
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Type" placeholder="Card Type" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Currency" placeholder="Card Currency" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Amount" placeholder="Amount" autocomplete="off" required>
+          <input class="modal__input modal__input--sum" type="text" name="Total Sum" placeholder="#0.00" disabled>
+          <button class="modal__button button" type="button">proceed</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="modal modal--steam">
+      <div class="modal__body">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="modal__logo modal__logo--steam">
+          <img class="img-fluid" src="img/modals/steam.svg" alt="Steam">
+        </div>
+        <p class="modal__rate"><span>N300.00</span> is our conversion rate for every Steam card on this platform.</p>
+        <p class="modal__text">The total value you derived here will be the amount you’ll be receiving during the total transaction process</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Amazon Value">
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Type" placeholder="Card Type" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Currency" placeholder="Card Currency" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Amount" placeholder="Amount" autocomplete="off" required>
+          <input class="modal__input modal__input--sum" type="text" name="Total Sum" placeholder="#0.00" disabled>
+          <button class="modal__button button" type="button">proceed</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="modal modal--google-play">
+      <div class="modal__body">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="modal__logo modal__logo--google-play">
+          <img class="img-fluid" src="img/modals/google-play.svg" alt="Google Play">
+        </div>
+        <p class="modal__rate"><span>N300.00</span> is our conversion rate for every Google Play card on this platform.</p>
+        <p class="modal__text">The total value you derived here will be the amount you’ll be receiving during the total transaction process</p>
+
+        <!-- .modal__form -->
+        <form class="modal__form" action="#" method="post" name="Amazon Value">
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Type" placeholder="Card Type" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Currency" placeholder="Card Currency" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Amount" placeholder="Amount" autocomplete="off" required>
+          <input class="modal__input modal__input--sum" type="text" name="Total Sum" placeholder="#0.00" disabled>
+          <button class="modal__button button" type="button">proceed</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="modal modal--others">
+      <div class="modal__body">
+
+        <!-- .modal__close-button -->
+        <button class="modal__close-button hamburger hamburger--spin-r" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div class="modal__logo modal__logo--others">
+          <img class="img-fluid" src="img/modals/others.svg" alt="Others">
+        </div>
+        <p class="modal__rate"><span>N300.00</span> is our conversion rate for every other card on this platform.</p>
+        <p class="modal__text">The total value you derived here will be the amount you’ll be receiving during the total transaction process</p>
+
+        <!-- /.modal__form -->
+        <form class="modal__form" action="#" method="post" name="Amazon Value">
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Type" placeholder="Card Type" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Card Currency" placeholder="Card Currency" autocomplete="off" required>
+          <input class="modal__input modal__input--gift-cards" type="text" name="Amount" placeholder="Amount" autocomplete="off" required>
+          <input class="modal__input modal__input--sum" type="text" name="Total Sum" placeholder="#0.00" disabled>
+          <button class="modal__button button" type="button">proceed</button>
+        </form>
+
+      </div>
     </div>
 
   </div> <!-- /.page -->

@@ -1,21 +1,21 @@
 //===== Mobile Navigation:
 
-// Hamburger toggle:
-$('.hamburger').on('click', function (event) {
+// header__hamburger toggle:
+$('.header__hamburger').on('click', function (event) {
   event.preventDefault();
 
-  $('.hamburger, .header__menu, .header__wrapper').toggleClass('is-active');
+  $('.header__hamburger, .header__menu, .header__wrapper').toggleClass('is-active');
   $('body').toggleClass('of-hidden');
 });
 
-// Hide the menu and return the standard view of the hamburger:
+// Hide the menu and return the standard view of the header__hamburger:
 $('.header__link, .button, .header__sell-link').on('click', function (event) {
-  $('.hamburger, .header__menu, .header__wrapper').removeClass('is-active');
+  $('.header__hamburger, .header__menu, .header__wrapper').removeClass('is-active');
   $('body').removeClass('of-hidden');
 });
 
 // Resetting scroll for menu:
-$('.hamburger, .header__link, .header__button').on('click', function (event) {
+$('.header__hamburger, .header__link, .header__button').on('click', function (event) {
   $('.header__menu').delay(350).queue(function (reset_scroll) {
     $(this).scrollTop(0);
     reset_scroll();
@@ -27,7 +27,7 @@ $(window).on('resize', function () {
   var width = $(document).width();
 
   if (width > 991) {
-    $('.hamburger, .header__menu, .header__wrapper').removeClass('is-active');
+    $('.header__hamburger, .header__menu, .header__wrapper').removeClass('is-active');
     $('body').removeClass('of-hidden');
   }
 });

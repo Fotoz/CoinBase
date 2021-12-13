@@ -1,0 +1,316 @@
+.modal
+  display: none
+
+  position: fixed
+  top: 0
+  left: 0
+  z-index: $zindex-modal
+
+  +box(100%)
+  padding: 5rem 2rem
+
+  background-color: rgba($black, .5)
+
+  +media-max($breakpoint-md)
+    padding:
+      top: 3rem
+      bottom: 3rem
+  +media-max($breakpoint-xsm)
+    padding:
+      right: 1rem
+      left: 1rem
+
+  // .modal__body
+  &__body
+    > *:last-child
+      margin-bottom: 0
+
+    position: relative
+
+    width: 100%
+    max-width: 908px
+    max-height: 100%
+    margin: auto
+    padding:
+      top: 5rem
+      bottom: 5rem
+    +responsive-value(padding-right, 7.5, 1.5)
+    +responsive-value(padding-left, 7.5, 1.5)
+
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+
+    text-align: center
+    background-color: $white
+    border-radius: 2rem
+
+    +media-max($breakpoint-md)
+      padding:
+        top: 4rem
+        bottom: 3rem
+      border-radius: 1rem
+
+    // .modal__body--sign-up,
+    // .modal__body--login
+    &--sign-up,
+    &--login
+      max-width: 664px
+
+  // .modal__title
+  &__title
+    margin-bottom: 2rem
+
+    font-size: 2.4rem
+    font-weight: 700
+
+    background: $gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+    +media-max($breakpoint-sm)
+      margin-bottom: 1rem
+    +media-max($breakpoint-xsm)
+      font-size: 2.2rem
+
+  // .modal__subtitle
+  &__subtitle
+    +responsive-value(margin-bottom, 4.2, 2)
+    +media-max($breakpoint-xsm)
+      font-size: 1.45rem
+
+  // .modal__logo
+  &__logo
+    max-width: 232px
+    margin:
+      right: auto
+      left: auto
+    +responsive-value(margin-bottom, 4, 2)
+
+    +media-min($breakpoint-md)
+      position: relative
+      z-index: 5
+      max-width: 308px
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: -6rem
+        left: -8.6rem
+        z-index: -1
+
+        +box(48rem, 24rem)
+        border-radius: 0 0 50% 50% / 0 0 100% 100%
+
+    // .modal__logo--bitcoin,
+    // .modal__logo--amazon
+    &--bitcoin,
+    &--amazon
+      &::before
+        background-color: #ee5a29
+
+    // .modal__logo--ethereum
+    // .modal__logo--itunes
+    &--ethereum,
+    &--itunes
+      &::before
+        background-color: #0096ff
+
+    // .modal__logo--steam
+    &--steam
+      &::before
+        background-color: #a04daf
+
+    // .modal__logo--google-play
+    &--google-play
+      &::before
+        background-color: #64bbc1
+
+    // .modal__logo--others
+    &--others
+      &::before
+        background-color: #a04daf
+
+  // .modal__rate
+  &__rate
+    margin-bottom: 3rem
+
+    &::after
+      content: ''
+      display: block
+
+      max-width: 59.2rem
+      height: .1rem
+      margin: 2rem auto 0
+
+      background-color: #cdcdcd
+
+    span
+      font-weight: 700
+
+    +media-max($breakpoint-xsm)
+      margin-bottom: 2rem
+      font-size: 1.45rem
+
+  // .modal__text
+  &__text
+    max-width: 350px
+    margin:
+      right: auto
+      left: auto
+    +responsive-value(margin-bottom, 4.2, 2.2)
+
+    font-size: 1.2rem
+    line-height: 1.5
+    color: #626262
+
+  // .modal__items
+  &__items
+    display: grid
+    gap: 3.5rem 2rem
+    grid-template-columns: repeat(auto-fit, minmax(auto, 232px))
+    justify-content: center
+
+    +media-max($breakpoint-lg)
+      row-gap: 2rem
+
+    // .modal__items--crypto
+    &--crypto
+      +media-min($breakpoint-md)
+        grid-template-columns: repeat(auto-fit, minmax(auto, 308px))
+
+  // .modal__item
+  &__item
+    +trs(opacity, .2s)
+    +media-hover
+      opacity: .85
+
+  // .modal__form
+  &__form
+    > *:last-child
+      margin-bottom: 0
+
+    max-width: 348px
+    margin:
+      right: auto
+      bottom: 3rem
+      left: auto
+
+  // .modal__input
+  &__input
+    display: block
+
+    width: 100%
+    margin-bottom: 3rem
+    padding: 1.65rem 2rem
+
+    font-size: 1.4rem
+    color: #2f2f2f
+
+    border-radius: .5rem
+    border: .1rem solid #d1d1d1
+
+    +trs(border-color)
+
+    &::placeholder
+      color: #2f2f2f
+
+    &:focus::placeholder
+      color: transparent
+
+    &:focus
+      border-color: #2f2f2f
+
+    +media-max($breakpoint-sm)
+      margin-bottom: 2rem
+
+    // .modal__input--sign-up
+    &--sign-up
+      margin-bottom: 3.7rem
+
+      +media-max($breakpoint-sm)
+        margin-bottom: 2.7rem
+
+    // .modal__input--login
+    &--login
+      margin-bottom: 1rem
+
+    // .modal__input--gift-cards
+    &--gift-cards
+      margin-bottom: 1.7rem
+
+    // .modal__input--sum
+    &--sum
+      max-width: 173px
+      margin: 3.7rem auto
+      padding:
+        top: 1.2rem
+        bottom: 1.2rem
+
+      font-size: 1.8rem
+      text-align: center
+
+      background-color: $white
+      border: .2rem dashed $accent
+
+      +media-max($breakpoint-md)
+        margin:
+          top: 2.35rem
+          bottom: 2.35rem
+
+  // .modal__forgot
+  &__forgot
+    +responsive-value(margin-bottom, 4, 2)
+    text-align: right
+
+  // .modal__forgot-link
+  &__forgot-link
+    font-size: 1.2rem
+    color: #2f2f2f
+
+    +media-hover
+      text-decoration: underline
+
+  // .modal__button
+  &__button
+
+  // .modal__question
+  &__question
+    font-size: 1.2rem
+    color: #2f2f2f
+
+    +media-max($breakpoint-md)
+      font-size: 1.7rem
+
+  // .modal__question-link
+  &__question-link
+    font-weight: 700
+    text-decoration: underline
+    +trs(color, .2s)
+
+    +media-hover
+      color: $accent
+
+  // .modal__sign-up-link
+  &__sign-up-link
+    +media-max(425)
+      display: table
+      margin:
+        right: auto
+        left: auto
+
+  // .modal__close-button
+  &__close-button
+    +media-max($breakpoint-lg)
+      position: absolute
+      top: 1rem
+      right: 1rem
+
+      .hamburger-box
+        width: $hamburger-modal-width
+
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after
+        width: $hamburger-modal-width
+        height: .3rem
